@@ -5,7 +5,7 @@
 ## Author: DonnieDice
 ## Category: RGX
 ## Group: RGX
-## IconTexture: Interface\AddOns\MaplestoryLevelUp\media\icon
+## IconTexture: Interface\AddOns\MaplestoryLevelUp\media\icon.tga
 ## SavedVariables: MSLUSettings
 ## RequiredDeps: RGX-Framework
 
