@@ -10,7 +10,7 @@
 ## RequiredDeps: RGX-Framework
 
 ## X-Category: UI Media, Questing & Leveling, Audio & Video, Miscellaneous
-## X-Website: https://github.com/donniedice/MaplestoryLevelUp
+## X-Website: https://github.com/RGXMods/MaplestoryLevelUp
 ## X-Curse-Project-ID: 594127
 ## X-Wago-ID: qv63JmKb
 ## X-WoWI-ID: 26257
