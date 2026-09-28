@@ -1,4 +1,4 @@
-﻿## Interface: 38002
+﻿## Interface: 50504
 ## Version: 4.0.5
 ## Title:  |cff2563EBM|r|cffffffffaplestory |r|cff2563EBL|r|cffffffffevel-|r|cff2563EBU|r|cffffffffp|r|cff2563EB!|r
 ## Notes:  Play a MapleStory-inspired level-up sound!  |n|r  |cff2563EB/mslu -|r Open help  |n|r   |cff2563EBBy DonnieDice|r
