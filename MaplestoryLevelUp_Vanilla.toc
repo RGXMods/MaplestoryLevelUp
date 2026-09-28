@@ -11,6 +11,7 @@
 ## X-Website: https://github.com/RGXMods/MaplestoryLevelUp
 ## X-Curse-Project-ID: 594127
 ## X-Wago-ID: qv63JmKb
+## X-Localizations: enUS, deDE, esES, esMX, frFR, itIT, koKR, ptBR, ptPT, ruRU, zhCN, zhTW
 
 data\locales.lua
 data\core.lua

@@ -39,7 +39,7 @@
 [![WoW TBC](https://img.shields.io/badge/WoW-Burning%20Crusade%20Classic-2563EB?style=flat-square&logo=worldofwarcraft)](https://worldofwarcraft.com)
 [![WoW Mists](https://img.shields.io/badge/WoW-Mists%20of%20Pandaria-2563EB?style=flat-square&logo=worldofwarcraft)](https://worldofwarcraft.com)
 
-[Features](#features) • [Quick Start](#quick-start) • [Commands](#command-reference) • [Compatibility](#compatibility) • [Installation](#installation) • [Support](#support)
+[Features](#features) • [Quick Start](#quick-start) • [Commands](#command-reference) • [Compatibility](#compatibility) • [Languages](#languages) • [Installation](#installation) • [Support](#support)
 
 </div>
 
@@ -203,6 +203,34 @@ _<span style="color:#e67e23">Every donation helps fund new features and improvem
 </div>
 
 **<span style="color:#ff6b6b">Required Dependency:</span>** <span style="color:#e67e23">[RGX-Framework](https://github.com/RGXMods/RGX-Framework) must be installed and enabled.</span>
+
+---
+
+<a id="languages"></a>
+## <span style="color:#2563EB">🌍 Language Support</span>
+
+MSLU ships full localizations for all 12 World of Warcraft client locales:
+
+<div align="center">
+
+| Locale | Language |
+|--------|----------|
+| `enUS` | English (base/fallback) |
+| `deDE` | German (Deutsch) |
+| `esES` | Spanish (Spain) — Español (España) |
+| `esMX` | Spanish (Latin America) — Español (Latinoamérica) |
+| `frFR` | French (Français) |
+| `itIT` | Italian (Italiano) |
+| `koKR` | Korean (한국어) |
+| `ptBR` | Portuguese (Brazil) — Português (Brasil) |
+| `ptPT` | Portuguese (Portugal) — Português (Portugal) |
+| `ruRU` | Russian (Русский) |
+| `zhCN` | Simplified Chinese (简体中文) |
+| `zhTW` | Traditional Chinese (繁體中文) |
+
+</div>
+
+The addon detects your client language automatically (chat messages, command help, and status messages are localized). If your client runs a locale not listed here, MSLU safely falls back to English — no untranslated key leaks into the game UI. The same 12-locale coverage is declared in every TOC file's `## X-Localizations` and in the CurseForge description.
 
 ---
 
