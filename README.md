@@ -195,10 +195,13 @@ _<span style="color:#e67e23">Every donation helps fund new features and improvem
 
 | WoW Version | Interface | Status | TOC File |
 |-------------|-----------|--------|----------|
-| **Midnight (Retail)** | `120007` | ✅ Fully Supported | `MaplestoryLevelUp.toc` |
-| **Mists of Pandaria Classic** | `50504` | ✅ Fully Supported | `MaplestoryLevelUp.toc` |
-| **Burning Crusade Classic** | `20506` | ✅ Fully Supported | `MaplestoryLevelUp.toc` |
-| **Classic Era** | `11509` | ✅ Fully Supported | `MaplestoryLevelUp.toc` |
+| **Midnight (Retail)** | `120100` | ✅ Fully Supported | `MaplestoryLevelUp.toc` |
+| **WoW Forever (Beta)** | `16001` | ✅ Fully Supported | `MaplestoryLevelUp_Forever.toc` |
+| **Mists of Pandaria Classic** | `50504` | ✅ Fully Supported | `MaplestoryLevelUp_Mists.toc` |
+| **Cataclysm Classic** | `40402` | ✅ Fully Supported | `MaplestoryLevelUp_Cata.toc` |
+| **Wrath of the Lich King Classic** | `38002` | ✅ Fully Supported | `MaplestoryLevelUp_Wrath.toc` |
+| **Burning Crusade Classic** | `20506` | ✅ Fully Supported | `MaplestoryLevelUp_TBC.toc` |
+| **Classic Era** | `11509` | ✅ Fully Supported | `MaplestoryLevelUp_Vanilla.toc` |
 
 </div>
 
