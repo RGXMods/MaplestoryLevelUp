@@ -47,7 +47,10 @@ def find_lua():
     for name in ("lua5.1", "lua"):
         path = shutil.which(name)
         if path:
-            return [path]
+            # "-" makes the interpreter read stdin as one chunk instead of
+            # running interactive line-by-line mode (where local variables
+            # do not survive between lines and the dump silently breaks).
+            return [path, "-"]
     return None
 
 
