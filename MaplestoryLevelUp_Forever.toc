@@ -12,7 +12,7 @@
 ## X-Category: UI Media, Questing & Leveling, Audio & Video, Miscellaneous
 ## X-Website: https://github.com/RGXMods/MaplestoryLevelUp
 ## X-Curse-Project-ID: 594127
-## X-Wago-ID: qv63JmKb
+## X-Wago-ID: 9rN42vKD
 
 data\locales.lua
 data\core.lua
