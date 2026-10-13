@@ -21,9 +21,9 @@ on:
           - beta
           - alpha
       tag_name:
-        description: Tag name to use in release links and notifications
+        description: Existing stable tag to package for a manual publishing retry
         required: false
-        default: v3.0.5
+        default: ''
         type: string
 
 env:
@@ -31,6 +31,7 @@ env:
   WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
   GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
   DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+  REQUESTED_TAG: ${{ inputs.tag_name }}
 
 jobs:
   release:
@@ -39,10 +40,35 @@ jobs:
       contents: write
 
     steps:
+      - name: Validate manual release target
+        if: github.event_name == 'workflow_dispatch'
+        shell: bash
+        env:
+          REQUESTED_CHANNEL: ${{ inputs.release_type }}
+        run: |
+          if [[ ! "$REQUESTED_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ || "$REQUESTED_CHANNEL" != release ]]; then
+            echo "::error::Manual publication requires an existing stable tag and release channel."
+            exit 1
+          fi
+
       - name: 🛠️ Clone Project
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ inputs.tag_name || github.ref }}
+
+      - name: Normalize publisher credentials
+        shell: bash
+        run: |
+          # Copied CR/LF characters terminate curl's auth header before its
+          # multipart headers, causing a misleading missing-metadata response.
+          clean="$(printf '%s' "$CF_API_KEY" | tr -d '\r\n')"
+          if [[ -z "$clean" ]]; then
+            echo "::error::CF_API_KEY is required for publication."
+            exit 1
+          fi
+          printf '::add-mask::%s\n' "$clean"
+          printf 'CF_API_KEY=%s\n' "$clean" >> "$GITHUB_ENV"
 
       - name: 🧰 Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
@@ -106,8 +132,12 @@ jobs:
             echo "::warning::X-Wago-ID is missing. Wago upload will be skipped."
           fi
 
-          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
-            tag="${GITHUB_REF#refs/tags/}"
+          if [[ "$GITHUB_REF" == refs/tags/* || "$GITHUB_EVENT_NAME" == workflow_dispatch ]]; then
+            tag="${REQUESTED_TAG:-${GITHUB_REF#refs/tags/}}"
+            if [[ "$(git rev-parse HEAD)" != "$(git rev-parse "${tag}^{commit}")" ]]; then
+              echo "::error::Checkout does not match the release tag."
+              exit 1
+            fi
             norm_tag="${tag#v}"
             norm_ver="${version#v}"
 
