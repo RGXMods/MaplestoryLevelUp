@@ -31,7 +31,7 @@
 
 <!-- Platform Badges -->
 [![CurseForge](https://img.shields.io/badge/CurseForge-Downloads-orange?style=flat-square&logo=curseforge)](https://www.curseforge.com/wow/addons/maplestorylevelup)
-[![Wago](https://img.shields.io/badge/Wago.io-Downloads-purple?style=flat-square&logo=wago)](https://addons.wago.io/addons/maplestorylevelup)
+[![Wago](https://img.shields.io/badge/Wago.io-Downloads-purple?style=flat-square&logo=wago)](https://addons.wago.io/addons/mslu)
 
 <!-- WoW Compatibility -->
 [![WoW Retail](https://img.shields.io/badge/WoW-Midnight-2563EB?style=flat-square&logo=worldofwarcraft)](https://worldofwarcraft.com)
@@ -242,7 +242,7 @@ The addon detects your client language automatically (chat messages, command hel
 
 1. **<span style="color:#2dc26b">Download</span>** <span style="color:#e67e23">from your preferred platform</span><span style="color:#3598db">:</span>
    - [<span style="color:#ff6b6b">CurseForge</span>](https://www.curseforge.com/wow/addons/maplestorylevelup) _(Recommended)_
-   - [<span style="color:#b96ad9">Wago.io</span>](https://addons.wago.io/addons/maplestorylevelup)
+   - [<span style="color:#b96ad9">Wago.io</span>](https://addons.wago.io/addons/mslu)
    - [<span style="color:#24292e">GitHub</span>](https://github.com/RGXMods/MaplestoryLevelUp/releases)
 
 2. **<span style="color:#4ecdc4">Extract</span>** <span style="color:#e67e23">to your</span> <span style="color:#06c">WoW</span> <span style="color:#e67e23">AddOns directory</span><span style="color:#3598db">:</span>
